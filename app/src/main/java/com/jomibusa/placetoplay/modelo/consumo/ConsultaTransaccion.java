@@ -1,15 +1,15 @@
-package com.jomibusa.placetoplay.modelo;
+package com.jomibusa.placetoplay.modelo.consumo;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-public class Transaction {
+public class ConsultaTransaccion {
 
     @SerializedName("status")
     @Expose
-    private Status_ status;
+    private Status status;
     @SerializedName("internalReference")
     @Expose
     private Integer internalReference;
@@ -62,11 +62,11 @@ public class Transaction {
     @Expose
     private Additional additional;
 
-    public Status_ getStatus() {
+    public Status getStatus() {
         return status;
     }
 
-    public void setStatus(Status_ status) {
+    public void setStatus(Status status) {
         this.status = status;
     }
 
@@ -208,7 +208,7 @@ public class Transaction {
 
     @Override
     public String toString() {
-        return "Transaction{" +
+        return "ConsultaTransaccion{" +
                 "status=" + status +
                 ", internalReference=" + internalReference +
                 ", reference='" + reference + '\'' +

@@ -1,15 +1,15 @@
-package com.jomibusa.placetoplay.modelo;
+package com.jomibusa.placetoplay.modelo.consumo;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-public class ReversoTransaccion {
+public class Transaction {
 
     @SerializedName("status")
     @Expose
-    private Status status;
+    private Status_ status;
     @SerializedName("internalReference")
     @Expose
     private Integer internalReference;
@@ -36,7 +36,7 @@ public class ReversoTransaccion {
     private Conversion conversion;
     @SerializedName("authorization")
     @Expose
-    private Object authorization;
+    private String authorization;
     @SerializedName("receipt")
     @Expose
     private Integer receipt;
@@ -58,12 +58,15 @@ public class ReversoTransaccion {
     @SerializedName("processorFields")
     @Expose
     private List<Object> processorFields = null;
+    @SerializedName("additional")
+    @Expose
+    private Additional additional;
 
-    public Status getStatus() {
+    public Status_ getStatus() {
         return status;
     }
 
-    public void setStatus(Status status) {
+    public void setStatus(Status_ status) {
         this.status = status;
     }
 
@@ -131,11 +134,11 @@ public class ReversoTransaccion {
         this.conversion = conversion;
     }
 
-    public Object getAuthorization() {
+    public String getAuthorization() {
         return authorization;
     }
 
-    public void setAuthorization(Object authorization) {
+    public void setAuthorization(String authorization) {
         this.authorization = authorization;
     }
 
@@ -195,9 +198,17 @@ public class ReversoTransaccion {
         this.processorFields = processorFields;
     }
 
+    public Additional getAdditional() {
+        return additional;
+    }
+
+    public void setAdditional(Additional additional) {
+        this.additional = additional;
+    }
+
     @Override
     public String toString() {
-        return "ReversoTransaccion{" +
+        return "Transaction{" +
                 "status=" + status +
                 ", internalReference=" + internalReference +
                 ", reference='" + reference + '\'' +
@@ -207,7 +218,7 @@ public class ReversoTransaccion {
                 ", issuerName='" + issuerName + '\'' +
                 ", amount=" + amount +
                 ", conversion=" + conversion +
-                ", authorization=" + authorization +
+                ", authorization='" + authorization + '\'' +
                 ", receipt=" + receipt +
                 ", type='" + type + '\'' +
                 ", refunded=" + refunded +
@@ -215,6 +226,7 @@ public class ReversoTransaccion {
                 ", provider='" + provider + '\'' +
                 ", discount=" + discount +
                 ", processorFields=" + processorFields +
+                ", additional=" + additional +
                 '}';
     }
 }

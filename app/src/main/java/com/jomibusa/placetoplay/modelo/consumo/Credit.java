@@ -1,4 +1,4 @@
-package com.jomibusa.placetoplay.modelo;
+package com.jomibusa.placetoplay.modelo.consumo;
 
 import java.util.List;
 import com.google.gson.annotations.Expose;

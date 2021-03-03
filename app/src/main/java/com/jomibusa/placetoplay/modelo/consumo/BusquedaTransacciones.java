@@ -1,4 +1,4 @@
-package com.jomibusa.placetoplay.modelo;
+package com.jomibusa.placetoplay.modelo.consumo;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

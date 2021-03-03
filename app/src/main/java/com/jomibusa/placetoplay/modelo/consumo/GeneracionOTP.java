@@ -1,9 +1,9 @@
-package com.jomibusa.placetoplay.modelo;
+package com.jomibusa.placetoplay.modelo.consumo;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class CalculoIntereses {
+public class GeneracionOTP {
 
     @SerializedName("status")
     @Expose
@@ -11,12 +11,6 @@ public class CalculoIntereses {
     @SerializedName("provider")
     @Expose
     private String provider;
-    @SerializedName("values")
-    @Expose
-    private Values values;
-    @SerializedName("conversion")
-    @Expose
-    private Object conversion;
 
     public Status getStatus() {
         return status;
@@ -34,29 +28,11 @@ public class CalculoIntereses {
         this.provider = provider;
     }
 
-    public Values getValues() {
-        return values;
-    }
-
-    public void setValues(Values values) {
-        this.values = values;
-    }
-
-    public Object getConversion() {
-        return conversion;
-    }
-
-    public void setConversion(Object conversion) {
-        this.conversion = conversion;
-    }
-
     @Override
     public String toString() {
-        return "CalculoIntereses{" +
+        return "GeneracionOTP{" +
                 "status=" + status +
                 ", provider='" + provider + '\'' +
-                ", values=" + values +
-                ", conversion=" + conversion +
                 '}';
     }
 }

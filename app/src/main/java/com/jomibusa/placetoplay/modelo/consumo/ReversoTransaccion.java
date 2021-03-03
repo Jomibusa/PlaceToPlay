@@ -1,11 +1,11 @@
-package com.jomibusa.placetoplay.modelo;
+package com.jomibusa.placetoplay.modelo.consumo;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-public class ConsultaTransaccion {
+public class ReversoTransaccion {
 
     @SerializedName("status")
     @Expose
@@ -36,7 +36,7 @@ public class ConsultaTransaccion {
     private Conversion conversion;
     @SerializedName("authorization")
     @Expose
-    private String authorization;
+    private Object authorization;
     @SerializedName("receipt")
     @Expose
     private Integer receipt;
@@ -58,9 +58,6 @@ public class ConsultaTransaccion {
     @SerializedName("processorFields")
     @Expose
     private List<Object> processorFields = null;
-    @SerializedName("additional")
-    @Expose
-    private Additional additional;
 
     public Status getStatus() {
         return status;
@@ -134,11 +131,11 @@ public class ConsultaTransaccion {
         this.conversion = conversion;
     }
 
-    public String getAuthorization() {
+    public Object getAuthorization() {
         return authorization;
     }
 
-    public void setAuthorization(String authorization) {
+    public void setAuthorization(Object authorization) {
         this.authorization = authorization;
     }
 
@@ -198,17 +195,9 @@ public class ConsultaTransaccion {
         this.processorFields = processorFields;
     }
 
-    public Additional getAdditional() {
-        return additional;
-    }
-
-    public void setAdditional(Additional additional) {
-        this.additional = additional;
-    }
-
     @Override
     public String toString() {
-        return "ConsultaTransaccion{" +
+        return "ReversoTransaccion{" +
                 "status=" + status +
                 ", internalReference=" + internalReference +
                 ", reference='" + reference + '\'' +
@@ -218,7 +207,7 @@ public class ConsultaTransaccion {
                 ", issuerName='" + issuerName + '\'' +
                 ", amount=" + amount +
                 ", conversion=" + conversion +
-                ", authorization='" + authorization + '\'' +
+                ", authorization=" + authorization +
                 ", receipt=" + receipt +
                 ", type='" + type + '\'' +
                 ", refunded=" + refunded +
@@ -226,7 +215,6 @@ public class ConsultaTransaccion {
                 ", provider='" + provider + '\'' +
                 ", discount=" + discount +
                 ", processorFields=" + processorFields +
-                ", additional=" + additional +
                 '}';
     }
 }

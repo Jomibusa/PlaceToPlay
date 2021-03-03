@@ -1,9 +1,9 @@
-package com.jomibusa.placetoplay.modelo;
+package com.jomibusa.placetoplay.modelo.consumo;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Tokenizacion {
+public class CalculoIntereses {
 
     @SerializedName("status")
     @Expose
@@ -11,9 +11,12 @@ public class Tokenizacion {
     @SerializedName("provider")
     @Expose
     private String provider;
-    @SerializedName("instrument")
+    @SerializedName("values")
     @Expose
-    private Instrument instrument;
+    private Values values;
+    @SerializedName("conversion")
+    @Expose
+    private Object conversion;
 
     public Status getStatus() {
         return status;
@@ -31,20 +34,29 @@ public class Tokenizacion {
         this.provider = provider;
     }
 
-    public Instrument getInstrument() {
-        return instrument;
+    public Values getValues() {
+        return values;
     }
 
-    public void setInstrument(Instrument instrument) {
-        this.instrument = instrument;
+    public void setValues(Values values) {
+        this.values = values;
+    }
+
+    public Object getConversion() {
+        return conversion;
+    }
+
+    public void setConversion(Object conversion) {
+        this.conversion = conversion;
     }
 
     @Override
     public String toString() {
-        return "Tokenizacion{" +
+        return "CalculoIntereses{" +
                 "status=" + status +
                 ", provider='" + provider + '\'' +
-                ", instrument=" + instrument +
+                ", values=" + values +
+                ", conversion=" + conversion +
                 '}';
     }
 }

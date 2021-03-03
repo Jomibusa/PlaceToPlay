@@ -1,9 +1,9 @@
-package com.jomibusa.placetoplay.modelo;
+package com.jomibusa.placetoplay.modelo.consumo;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class GeneracionOTP {
+public class Tokenizacion {
 
     @SerializedName("status")
     @Expose
@@ -11,6 +11,9 @@ public class GeneracionOTP {
     @SerializedName("provider")
     @Expose
     private String provider;
+    @SerializedName("instrument")
+    @Expose
+    private Instrument instrument;
 
     public Status getStatus() {
         return status;
@@ -28,11 +31,20 @@ public class GeneracionOTP {
         this.provider = provider;
     }
 
+    public Instrument getInstrument() {
+        return instrument;
+    }
+
+    public void setInstrument(Instrument instrument) {
+        this.instrument = instrument;
+    }
+
     @Override
     public String toString() {
-        return "GeneracionOTP{" +
+        return "Tokenizacion{" +
                 "status=" + status +
                 ", provider='" + provider + '\'' +
+                ", instrument=" + instrument +
                 '}';
     }
 }

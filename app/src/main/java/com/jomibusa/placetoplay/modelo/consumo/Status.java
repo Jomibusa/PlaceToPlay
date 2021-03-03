@@ -1,16 +1,16 @@
-package com.jomibusa.placetoplay.modelo;
+package com.jomibusa.placetoplay.modelo.consumo;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Status_ {
+public class Status {
 
     @SerializedName("status")
     @Expose
     private String status;
     @SerializedName("reason")
     @Expose
-    private String reason;
+    private Integer reason;
     @SerializedName("message")
     @Expose
     private String message;
@@ -26,11 +26,11 @@ public class Status_ {
         this.status = status;
     }
 
-    public String getReason() {
+    public Integer getReason() {
         return reason;
     }
 
-    public void setReason(String reason) {
+    public void setReason(Integer reason) {
         this.reason = reason;
     }
 
@@ -52,9 +52,9 @@ public class Status_ {
 
     @Override
     public String toString() {
-        return "Status_{" +
+        return "Status{" +
                 "status='" + status + '\'' +
-                ", reason='" + reason + '\'' +
+                ", reason=" + reason +
                 ", message='" + message + '\'' +
                 ", date='" + date + '\'' +
                 '}';
