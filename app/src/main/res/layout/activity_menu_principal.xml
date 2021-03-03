@@ -42,7 +42,7 @@
         app:rowCount="2">
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardPregrados"
+            android:id="@+id/cardGenerarPagos"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginLeft="16dp"
@@ -62,8 +62,8 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:src="@drawable/generarpago" />
 
@@ -82,7 +82,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardPostgrados"
+            android:id="@+id/cardVisualizarPagos"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginLeft="16dp"
@@ -102,8 +102,8 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:src="@drawable/bill" />
 
