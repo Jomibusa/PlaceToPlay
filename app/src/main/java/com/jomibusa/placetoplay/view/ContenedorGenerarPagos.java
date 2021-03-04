@@ -21,9 +21,9 @@ import com.jomibusa.placetoplay.presenter.GenerarPagosPresenter;
 
 public class ContenedorGenerarPagos extends BaseActivity<GenerarPagosPresenter> implements TransView {
 
-    EditText txtName, txtCorreo, txtCelular, txtNumTarjeta;
-    TextView txtCardName, cardNumber;
-    Button btnSiguiente, btnRegresar, btnEnviar;
+    EditText txtName, txtCorreo, txtCelular, txtNumTarjeta, txtMes, txtAnio, txtNumCVV;
+    TextView txtCardName, cardNumber, txtCardMes, txtCardAnio;
+    Button btnSiguiente, btnRegresar, btnEnviar, btnEliminar;
     LinearLayout contenedorInicial, contenedorTarjeta;
 
 
@@ -52,7 +52,13 @@ public class ContenedorGenerarPagos extends BaseActivity<GenerarPagosPresenter> 
             contenedorInicial.setVisibility(View.VISIBLE);
         });
 
+        btnEliminar.setOnClickListener(v -> {
+            txtNumTarjeta.setText("");
+        });
+
         escucharTarjeta();
+        escucharMes();
+        escucharAnio();
 
     }
 
@@ -68,6 +74,12 @@ public class ContenedorGenerarPagos extends BaseActivity<GenerarPagosPresenter> 
         txtCardName = findViewById(R.id.txtCardName);
         cardNumber = findViewById(R.id.cardNumber);
         txtNumTarjeta = findViewById(R.id.txtNumTarjeta);
+        btnEliminar = findViewById(R.id.btnEliminar);
+        txtCardMes = findViewById(R.id.txtCardMes);
+        txtCardAnio = findViewById(R.id.txtCardAnio);
+        txtMes = findViewById(R.id.txtMes);
+        txtAnio = findViewById(R.id.txtAnio);
+        txtNumCVV = findViewById(R.id.txtNumCVV);
     }
 
     @Override
@@ -116,25 +128,42 @@ public class ContenedorGenerarPagos extends BaseActivity<GenerarPagosPresenter> 
         });
     }
 
-    public String enmascarar(String PAN) {
+    public void escucharMes(){
+        txtMes.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
-        String inicio = PAN.substring(0, 6);
-        System.out.println("Inicio: " + inicio);
-        String medio = PAN.substring(inicio.length(), (PAN.length() - 4));
-        System.out.println("Medio: " + medio);
-        String end = PAN.substring(PAN.length() - 4, PAN.length());
-        System.out.println("Final: " + end);
+            }
 
-        String mascara = "";
-        for (int i = 0; i < medio.length(); i++) {
-            mascara = mascara + "X";
-        }
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                txtCardMes.setText(txtMes.getText());
+            }
 
-        String completo = inicio + mascara + end;
-        System.out.println("El PAN es: " + PAN);
-        System.out.println("El PAN enmascarado es: " + completo);
+            @Override
+            public void afterTextChanged(Editable s) {
 
-        return completo;
+            }
+        });
+    }
+
+    public void escucharAnio(){
+        txtAnio.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                txtCardAnio.setText(txtAnio.getText());
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
     }
 
     @Override

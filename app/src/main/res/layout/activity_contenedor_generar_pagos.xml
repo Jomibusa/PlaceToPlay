@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
     android:background="@color/black"
+    android:fitsSystemWindows="true"
     tools:context=".view.ContenedorGenerarPagos">
 
     <FrameLayout
-        android:layout_margin="20dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_margin="20dp"
         android:background="@drawable/background_layout">
 
         <LinearLayout
@@ -20,16 +20,16 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:orientation="vertical"
-            android:visibility="visible">
+            android:visibility="gone">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="15dp"
-                android:textStyle="bold"
-                android:textSize="20sp"
+                android:text="Nombre Completo"
                 android:textColor="@color/black"
-                android:text="Nombre Completo" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/txtName"
@@ -37,28 +37,28 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="15dp"
-                android:singleLine="true"
-                android:inputType="textPersonName"
                 android:background="#00FFFFFF"
-                android:textColor="#000000"
-                android:hint="Nombre Completo"/>
+                android:hint="Nombre Completo"
+                android:inputType="textPersonName"
+                android:singleLine="true"
+                android:textColor="#000000" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
-                android:background="@color/colorPrimaryDark"/>
+                android:background="@color/colorPrimaryDark" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="15dp"
-                android:textStyle="bold"
-                android:textSize="20sp"
+                android:text="Correo Electrónico"
                 android:textColor="@color/black"
-                android:text="Correo Electrónico" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/txtCorreo"
@@ -66,28 +66,28 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="15dp"
-                android:singleLine="true"
-                android:inputType="textEmailAddress"
                 android:background="#00FFFFFF"
-                android:textColor="#000000"
-                android:hint="Correo Electrónico"/>
+                android:hint="Correo Electrónico"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:textColor="#000000" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
-                android:background="@color/colorPrimaryDark"/>
+                android:background="@color/colorPrimaryDark" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="15dp"
-                android:textStyle="bold"
-                android:textSize="20sp"
+                android:text="Número de Celular"
                 android:textColor="@color/black"
-                android:text="Número de Celular" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/txtCelular"
@@ -95,19 +95,19 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="15dp"
-                android:singleLine="true"
-                android:inputType="number"
                 android:background="#00FFFFFF"
-                android:textColor="#000000"
-                android:hint="Número de Celular"/>
+                android:hint="Número de Celular"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textColor="#000000" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
-                android:background="@color/colorPrimaryDark"/>
+                android:background="@color/colorPrimaryDark" />
 
             <Button
                 android:id="@+id/btnSiguiente"
@@ -116,9 +116,9 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="30dp"
                 android:layout_marginBottom="30dp"
-                android:textColor="@color/white"
+                android:background="@drawable/background_button"
                 android:text="Siguiente"
-                android:background="@drawable/background_button"/>
+                android:textColor="@color/white" />
 
         </LinearLayout>
 
@@ -128,7 +128,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:orientation="vertical"
-            android:visibility="gone">
+            android:visibility="visible">
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardVisualizarPagos"
@@ -148,21 +148,21 @@
                         android:id="@+id/imgFranquicia"
                         android:layout_width="32dp"
                         android:layout_height="32dp"
-                        android:layout_marginTop="10dp"
                         android:layout_marginStart="20dp"
-                        android:src="@drawable/visa"/>
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/visa" />
 
                     <TextView
                         android:id="@+id/cardNumber"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
-                        android:layout_marginStart="15dp"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
+                        android:text=""
                         android:textColor="@color/black"
-                        android:text="" />
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -172,53 +172,83 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:layout_marginStart="15dp"
-                            android:textStyle="bold"
-                            android:textSize="12sp"
+                            android:layout_weight="1"
+                            android:text="TITULAR"
                             android:textColor="@color/black"
-                            android:text="TITULAR" />
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:layout_marginStart="15dp"
-                            android:textStyle="bold"
-                            android:textSize="12sp"
+                            android:layout_weight="1"
+                            android:text="EXPIRA"
                             android:textColor="@color/black"
-                            android:text="EXPIRA" />
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
 
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"
                         android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
                         android:orientation="horizontal">
 
                         <TextView
                             android:id="@+id/txtCardName"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:layout_marginStart="15dp"
-                            android:textStyle="bold"
-                            android:textSize="12sp"
+                            android:layout_weight="1"
+                            android:text="José Miguel Bueno Sánchez"
                             android:textColor="@color/black"
-                            android:text="José Miguel Bueno Sánchez" />
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
 
-                        <TextView
-                            android:id="@+id/txtExpira"
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:layout_marginStart="15dp"
-                            android:textStyle="bold"
-                            android:textSize="12sp"
-                            android:textColor="@color/black"
-                            android:text="03/27" />
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/txtCardMes"
+                                android:layout_width="130dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:textAlignment="center"
+                                android:layout_weight="1"
+                                android:text="**"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textAlignment="textStart"
+                                android:text="/"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txtCardAnio"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="**"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
@@ -229,42 +259,56 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="15dp"
-                android:textStyle="bold"
-                android:textSize="16sp"
-                android:textColor="@color/black"
-                android:text="Número de la Tarjeta" />
-
-            <EditText
-                android:id="@+id/txtNumTarjeta"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="15dp"
-                android:singleLine="true"
-                android:inputType="number"
-                android:background="#00FFFFFF"
-                android:textColor="#000000"
+                android:layout_marginBottom="15dp"
+                android:text="Número de la Tarjeta"
+                android:textColor="@color/black"
                 android:textSize="16sp"
-                android:maxLength="32"
-                android:hint="Número de la Tarjeta"/>
+                android:textStyle="bold" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/txtNumTarjeta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="#00FFFFFF"
+                    android:hint="Número de la Tarjeta"
+                    android:inputType="number"
+                    android:maxLength="32"
+                    android:singleLine="true"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/btnEliminar"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/delete" />
+            </FrameLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
-                android:background="@color/colorPrimaryDark"/>
+                android:background="@color/colorPrimaryDark" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="15dp"
-                android:textStyle="bold"
-                android:textSize="16sp"
+                android:text="Fecha de Vencimiento"
                 android:textColor="@color/black"
-                android:text="Fecha de Vencimiento" />
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -275,60 +319,60 @@
                     android:id="@+id/txtMes"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_marginStart="15dp"
-                    android:textAlignment="center"
-                    android:singleLine="true"
-                    android:inputType="number"
+                    android:layout_weight="1"
                     android:background="#00FFFFFF"
-                    android:textColor="#000000"
+                    android:hint="Mes"
+                    android:inputType="number"
                     android:maxLength="2"
-                    android:textSize="16sp"
-                    android:hint="Mes"/>
+                    android:singleLine="true"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textAlignment="center"
                     android:layout_weight="1"
-                    android:textStyle="bold"
-                    android:textSize="20sp"
+                    android:text="/"
+                    android:textAlignment="center"
                     android:textColor="@color/black"
-                    android:text="/" />
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
                 <EditText
                     android:id="@+id/txtAnio"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_marginEnd="15dp"
-                    android:textAlignment="center"
-                    android:singleLine="true"
-                    android:inputType="number"
+                    android:layout_weight="1"
                     android:background="#00FFFFFF"
-                    android:textColor="#000000"
-                    android:textSize="16sp"
+                    android:hint="Año"
+                    android:inputType="number"
                     android:maxLength="4"
-                    android:hint="Año"/>
+                    android:singleLine="true"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
 
             </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
-                android:background="@color/colorPrimaryDark"/>
+                android:background="@color/colorPrimaryDark" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="15dp"
-                android:textStyle="bold"
-                android:textSize="16sp"
+                android:text="CVV"
                 android:textColor="@color/black"
-                android:text="CVV" />
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/txtNumCVV"
@@ -336,20 +380,21 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="15dp"
-                android:textSize="16dp"
-                android:singleLine="true"
-                android:inputType="number"
                 android:background="#00FFFFFF"
+                android:hint="CVV"
+                android:inputType="number"
+                android:singleLine="true"
                 android:textColor="#000000"
-                android:hint="CVV"/>
+                android:maxLength="3"
+                android:textSize="16dp" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
-                android:background="@color/colorPrimaryDark"/>
+                android:background="@color/colorPrimaryDark" />
 
 
             <LinearLayout
@@ -361,29 +406,29 @@
                     android:id="@+id/btnRegresar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_weight="1"
                     android:layout_gravity="center"
+                    android:layout_marginStart="15dp"
                     android:layout_marginTop="30dp"
+                    android:layout_marginEnd="10dp"
                     android:layout_marginBottom="30dp"
-                    android:textColor="@color/white"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_button"
                     android:text="Regresar"
-                    android:background="@drawable/background_button"/>
+                    android:textColor="@color/white" />
 
                 <Button
                     android:id="@+id/btnEnviar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="15dp"
                     android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
                     android:layout_marginTop="30dp"
+                    android:layout_marginEnd="15dp"
                     android:layout_marginBottom="30dp"
-                    android:textColor="@color/white"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_button"
                     android:text="Enviar"
-                    android:background="@drawable/background_button"/>
+                    android:textColor="@color/white" />
 
             </LinearLayout>
 
